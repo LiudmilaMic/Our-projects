@@ -8,7 +8,7 @@
   <header>
 	<nav>
 		<a>
-		  <img src="img/index-logo.svg" width="368" height="155" alt="Логотип Барбершопа "Бородинский">
+		  <img src="img/index-logo.svg" width="371" height="155" alt="Логотип Барбершопа «Бородинский»">
 		</a> 
 
 		<ul>
@@ -21,14 +21,14 @@
 
 		<ul>
 			<li>
-				<button type="button">Вход</button>
+				<a href="login.html">Вход</a>
 			</li>
 		</ul>
 	</nav>
   </header>
 
   <main>
-  	<h1>Барбершоп «Бородинский»</h1>
+  	<h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
 
   	<section>
   		<h2>Преимущества</h2>
@@ -66,7 +66,9 @@
   		<h2>Фотогалерея</h2>
   		<figure>
   			<a href="#">
-  				<img src="img/gallery1.png" width="286" height="164" alt="Интерьер">
+  				<img srcset="img/index-gallery-x2.jpg 2x,
+  				             img/index-gallery-x3.jpg 3x"
+  				     src="img/index-gallery-x1.jpg" width="286" height="164" alt="Интерьер">
   			</a>
   		</figure>
   		<button type="button">Назад</button>
@@ -93,6 +95,25 @@
   		<h2>Записаться</h2>
   		<p>Укажите желаюмую дату и время и мы свяжемся с Вами для подтверждения брони</p>
   		<!--form-->
+  		<form action="https://htmlacademy.ru" method="post">
+  			<p>
+  			   <label for="date">Дата</label>
+  			   <input type="date" name="date" value="2017-10-08" id="date">
+  		    </p>
+  		    <p>
+  		       <label for="time">Время</label>
+  			   <input type="time" name="time" value="10:00" id="time">
+  		    </p>
+  		    <p>
+  		    	<label for="name">Ваше имя</label>
+  			    <input type="text" name="name" value="" placeholder="Борода" id="name">
+  			</p>
+  			<p>
+  				<label for="phone">Телефон</label>
+  			    <input type="tel" name="phone" value="" placeholder="+7 123 456-78-90" id="phone">
+  			</p>
+  			<button type="submit">Отправить</button>
+  		</form>
   	</section>
   </main>
 
@@ -116,15 +137,39 @@
     </p>
   </footer>
 
-  <section>
+  <section class="login">
   	<h2>Личный кабинет</h2>
   	<p>Введите свой логин и пароль</p>
   	<!--form-->
+  	<form class ="user" method="post" action="https://scho.htmlacademy.ru">
+  		<p>
+  			<label for="user-login">Логин</label>
+  			<input type="email" name="login" id="user-login" placeholder="email@example.com">
+  		</p>
+  		<p>
+  			<label for="user-password">Пароль</label>
+  			<input type="password" name="password" id="user-password" placeholder="........">
+  		</p>
+  		<p>
+  			<input type="checkbox" name="remember" id="remember">
+  			<label for="remember">
+  				Запомните меня
+  			</label>
+  			<a href="#">Я забыл пароль!</a>
+  		</p>
+  		<button type="submit">Войти</button>
+  	</form>
+
   	<button type="button">Закрыть</button>
   </section>
 
-  <section>
+  <section class="map">
   	<h2>Как до нас добраться</h2>
+  	<p>
+  		<img srcset="img/map@2x.png 2x, img/map@3x.png 3x"
+  		      src="img/map.png" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+  	</p>
   	<button type="button">Закрыть</button>
+  </section>  	
 </body>
 </html>

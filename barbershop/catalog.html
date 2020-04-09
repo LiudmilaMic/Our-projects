@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Барбершоп «Бородинский»-средства для ухода</title>
+</head>
+<body>
+	<header>
+		<nav>
+		<a href="index.html">
+		  <img src="img/logo.svg" width="111" height="24" alt="Логотип Барбершопа «Бородинский»">
+		</a> 
+
+		<ul>
+			<li><a href="info.html">Информация</a></li>
+			<li><a href="news.html">Новости</a></li>
+			<li><a href="price.html">Прайс-лист</a></li>
+			<li><a href="" class="current">Магазин</a></li>
+			<li><a href="contacts.html">Контакты</a></li>
+		</ul>
+
+		<ul>
+			<li>
+				<button type="button">Вход</button>
+			</li>
+		</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Средства для ухода</h1>
+        <ul class="breadcrumbs">
+        	<li>
+        		<a href="index.html">Главная</a>
+        	</li>
+        	<li>
+        		<a href="shop.html">Магазин</a>
+        	</li>
+        	<li>
+        		<a href="">Средства для ухода</a>
+        	</li>
+        </ul>
+
+        <section class="catalog">
+          <form  action="https://echo.htmlacademy.ru" method="get">
+            <fieldset>
+              <legend>Производители:</legend>
+              <ul>
+                <li>
+                  <input type="checkbox"  id="BaxterOfCalifornia" name="Baxter of California" checked>
+                  <label for="BaxterOfCalifornia">Baxter of California</label>
+                </li>
+                <li>        
+                  <input type="checkbox"  id="MrNatty" name="Mr Natty">
+                  <label for="MrNatty">Mr Natty</label>
+                </li>
+                <li>
+                  <input type="checkbox"  id="Suavecito" name="Suavecito" checked>
+                  <label for="Suavecito">Suavecito</label>
+                </li>
+                <li>
+                  <input type="checkbox"  id="MalinGoetz" name="Malin+Goetz">
+                  <label for="MalinGoetz">Malin+Goetz</label> 
+                </li>
+                <li>
+                  <input type="checkbox"  id="Murrays" name="Murray's">
+                  <label for="Murrays">Murray's</label> 
+                </li>
+                <li>          
+                  <input type="checkbox"  id="AmericanCrew" name="American Crew" checked>
+                  <label for="AmericanCrew">American Crew</label>
+                </li> 
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend>Группы товаров:</legend>
+              <ul>
+                <li> 
+                  <input type="radio" name="item-group" id="shaving" value="shaving">
+                  <label for="shaving">Бритвенные принадлежности</label>
+                </li>
+                <li>
+                  <input type="radio" name="item-group" id="care" value="care" checked>
+                  <label for="care">Средства для ухода</label> 
+                </li>
+                <li>
+                  <input type="radio" name="item-group" id="accessories" value="accessories">
+                  <label for="accessories">Аксессуары</label>
+                </li>
+              </ul>
+            </fieldset>
+            <button type="button" class="btn">Показать</button>
+          </form>
+
+          <section class="catalog-galery">
+            <ul>
+              <li class="catalog-galery-item">
+                <img srcset = "img/shop-item1@2x.png 2x, img/shop-item1@3x.png 3x"
+                   src="img/shop-item1.png" width="220" height="165" alt="Набор для путешествий «Baxter of California»">
+                <div class="catalog-galery-item-wprapper">
+                  <h3><a href="item.html">Набор для путешествий <span>«Baxter of California»<span></a></h3>
+                  <div class="item-buy">
+                    <p class="">2900 &#8381;</p>
+                    <a href="#" class="btn">Купить</a>
+                  </div>
+                </div>   
+              </li>
+              <li class="catalog-galery-item">
+                <img srcset = "img/shop-item2@2x.png 2x, img/shop-item2@3x.png 3x"
+                   src="img/shop-item2.png" width="220" height="165" alt="Увлажняющий кондиционер 
+                   «Baxter of California»">
+                <div class="catalog-galery-item-wprapper">
+                  <h3><a href="#">Увлажняющий кондиционер <span>«Baxter of California»</span></a></h3>
+                  <div class="item-buy">
+                    <p class="">750 &#8381;</p>
+                    <a href="#" class="btn">Купить</a>
+                  </div>
+                </div>   
+              </li>
+              <li class="catalog-galery-item">
+                <img srcset = "img/shop-item3@2x.png 2x, img/shop-item3@3x.png 3x"
+                   src="img/shop-item3.png" width="220" height="165" alt="Гель для волос «Suavecito»">
+                <div class="catalog-galery-item-wprapper">
+                  <h3><a href="#">Гель для волос <span>«Suavecito»</span></a></h3>
+                  <div class="item-buy">
+                    <p class="">290 &#8381;</p>
+                    <a href="#" class="btn">Купить</a>
+                  </div>
+                </div>   
+              </li>
+              <li class="catalog-galery-item">
+                <img srcset = "img/shop-item4@2x.png 2x, img/shop-item4@3x.png 3x"
+                   src="img/shop-item4.png" width="220" height="165" alt="Глина для укладки волос «American crew»">
+                <div class="catalog-galery-item-wprapper">
+                  <h3><a href="#">Глина для укладки волос <span>«American crew»</span></a></h3>
+                  <div class="item-buy">
+                    <p class="">500 &#8381;</p>
+                    <a href="#" class="btn">Купить</a>
+                  </div>
+                </div>   
+              </li>
+              <li class="catalog-galery-item">
+                <img srcset = "img/shop-item5@2x.png 2x, img/shop-item5@3x.png 3x"
+                   src="img/shop-item5.png" width="220" height="165" alt="Гель для волос «American crew»">
+                <div class="catalog-galery-item-wprapper">
+                  <h3><a href="#">Гель для волос <span>«American crew»</span></a></h3>
+                  <div class="item-buy">
+                    <p class="">300 &#8381;</p>
+                    <a href="#" class="btn">Купить</a>
+                  </div>
+                </div>   
+              </li>
+              <li class="catalog-galery-item">
+                <img srcset = "img/shop-item6@2x.png 2x, img/shop-item6@3x.png 3x"
+                   src="img/shop-item6.png" width="220" height="165" alt="Набор для бритья
+                   «Baxter of California»">
+                <div class="catalog-galery-item-wprapper">
+                  <h3><a href="#">Набор для бритья <span>«Baxter of California»</span></a></h3>
+                  <div class="item-buy">
+                    <p class="">3900 &#8381;</p>
+                    <a href="#" class="btn">Купить</a>
+                  </div>
+                </div>   
+              </li>
+            </ul>
+          </section>
+
+          <div class="paginator">
+            <a href="#">1</a>
+            <a class="current">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+          </div>
+
+        </section>
+	</main>
+
+	<footer>
+  	    <p>
+  		    Барбершоп «Бородинский»<br>
+            Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+            <a href="map.html">Как нас найти?</a><br>
+            Телефон: +7 (495) 666-02-66
+  	    </p>
+  	    <div>
+  		    <p>Давайте дружить!</p>
+  		    <ul>
+  			    <li><a href="">Вконтакте</a></li>
+  			    <li><a href="">Фейсбук</a></li>
+  			    <li><a href="">Инстаграм</a></li>
+  		    </ul>
+  	    </div>
+        <p>Разработано:
+            <a href="">HTML Academy</a>
+        </p>
+    </footer>
+
+    <section>
+  	    <h2>Личный кабинет</h2>
+  	    <p>Введите свой логин и пароль</p>
+  	    <!--form-->
+  	    <button type="button">Закрыть</button>
+    </section>
+
+    <section>
+  	    <h2>Как до нас добраться</h2>
+  	    <button type="button">Закрыть</button>
+    </section>  	
+
+</body>
+</html>
