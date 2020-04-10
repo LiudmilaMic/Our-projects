@@ -3,79 +3,84 @@
 <head>
 	<meta charset="utf-8">
 	<title>Барбершоп «Бородинский»</title>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <header>
-	<nav>
-		<a>
+  <header class="main-header">
+	<nav class="main-navigation">
+		<a class="index-logo">
 		  <img src="img/index-logo.svg" width="371" height="155" alt="Логотип Барбершопа «Бородинский»">
 		</a> 
 
-		<ul>
+		<ul class="site-navigation">
 			<li><a href="info.html">Информация</a></li>
-			<li><a href="news.html">Новости</a></li>
+			<li ><a href="news.html">Новости</a></li>
 			<li><a href="price.html">Прайс-лист</a></li>
 			<li><a href="catalog.html">Магазин</a></li>
 			<li><a href="contacts.html">Контакты</a></li>
 		</ul>
 
-		<ul>
+		<ul class="user-navigation">
 			<li>
-				<a href="login.html">Вход</a>
+				<a class= "login-link" href="login.html">Вход</a>
 			</li>
 		</ul>
 	</nav>
   </header>
 
-  <main>
+  <main class="container">
   	<h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
 
-  	<section>
+  	<section class="features">
   		<h2>Преимущества</h2>
-  		<ul>
-  			<li>
+  		<ul class="features-list">
+  			<li class="features-item">
   				<h3>Быстро</h3>
   				<p>Мы делаем свою работу быстро! Два часа пролетят незаметно и Вы - счастливый обладатель стильной стрижки-минутки!</p>
   			</li>
-  			<li>Круто</h3>
+  			<li class="features-item">Круто</h3>
   				<p>Забудьте, как Вы стриглись раньше. Мы сделаем из Вас звезду футбола или кино! Во всяком случае внешне. </p>
   			</li>
-  			<li>
+  			<li class="features-item">
   				<h3>Дорого</h3>
   				<p>Наши мастера - профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенгный статус?</p>
   			</li>
   		</ul>
   	</section>
-
-  	<section>
+  <div class="index-columns">
+  	<section class="news">
   		<h2>Новости</h2>
-        <ul>
-        	<li>
-        		<p>Наконец нам завезли Ягермайстер! Теперь Вы можете пропустить стаканчик во время стрижки</p>
-        		<time datetime="2020-01-11">11 января</time>
+        <ul class="news-list">
+        	<li class="news-item">
+        		<p class="news-text">Наконец нам завезли Ягермайстер! Теперь Вы можете пропустить стаканчик во время стрижки</p>
+        		<time datetime="2020-01-11" class="news-date">11 января</time>
         	</li>
-        	<li>
-        		<p> В нашей команде пополнение, Борис «Бритва» Стригунец, обладаьель множества титулов и наград пополнил наши стройные ряды</p>
-        		<time datetime="2020-01-18">18 января</time>
+        	<li class="news-item">
+        		<p class="news-date"> В нашей команде пополнение, Борис «Бритва» Стригунец, обладаьель множества титулов и наград пополнил наши стройные ряды</p>
+        		<time datetime="2020-01-18" class="news-date">18 января</time>
         	</li>
         </ul>
-        <a href="news.html">Все новости</a>
+        <a href="news.html" class="btn">Все новости</a>
   	</section>
 
-  	<section>
+  	<section class="gallery">
   		<h2>Фотогалерея</h2>
-  		<figure>
+  		<figure class="gallery-content">
   			<a href="#">
   				<img srcset="img/index-gallery-x2.jpg 2x,
   				             img/index-gallery-x3.jpg 3x"
   				     src="img/index-gallery-x1.jpg" width="286" height="164" alt="Интерьер">
   			</a>
   		</figure>
-  		<button type="button">Назад</button>
-  		<button type="button">Вперед</button>
+  		<button type="button" class ="btn gallery-btn gallery-btn--back">Назад</button>
+  		<button type="button" class="btn gallery-btn gallery-btn--next">Вперед</button>
   	</section>
+  </div>
 
-  	<section>
+  <div class="index-columns">
+  	<section class="contacts">
   		<h2>Контактная информация</h2>
   		<p>
   			Барбершоп «Бородинский»<br>
@@ -87,89 +92,90 @@
             Пн—Пт: с 10:00 до 22:00<br>
             Сб—Вс: с 10:00 до 19:00
   		</p>
-  		<a href="map.html">Как проехать</a>
-  		<a href="contacts.html">Обратная связь</a>
+  		<a href="map.html" class="btn">Как проехать</a>
+  		<a href="contacts.html" class="btn">Обратная связь</a>
   	</section>
 
-  	<section>
+  	<section class="appointment">
   		<h2>Записаться</h2>
-  		<p>Укажите желаюмую дату и время и мы свяжемся с Вами для подтверждения брони</p>
+  		<p class="appointment-info">Укажите желаюмую дату и время и мы свяжемся с Вами для подтверждения брони</p>
   		<!--form-->
-  		<form action="https://htmlacademy.ru" method="post">
-  			<p>
+  		<form action="https://htmlacademy.ru" method="post" class="appointment-form">
+  			<p class="appointment-item">
   			   <label for="date">Дата</label>
   			   <input type="date" name="date" value="2017-10-08" id="date">
   		    </p>
-  		    <p>
+  		    <p class="appointment-item">
   		       <label for="time">Время</label>
   			   <input type="time" name="time" value="10:00" id="time">
   		    </p>
-  		    <p>
+  		    <p class="appointment-item">
   		    	<label for="name">Ваше имя</label>
   			    <input type="text" name="name" value="" placeholder="Борода" id="name">
   			</p>
-  			<p>
+  			<p class="appointment-item">
   				<label for="phone">Телефон</label>
   			    <input type="tel" name="phone" value="" placeholder="+7 123 456-78-90" id="phone">
   			</p>
-  			<button type="submit">Отправить</button>
+  			<button type="submit" class="btn">Отправить</button>
   		</form>
   	</section>
+  </div>	
   </main>
-
-  <footer>
-  	<p>
+  
+  <footer class="main-footer">
+  	<p class="main-footer-contacts">
   		Барбершоп «Бородинский»<br>
         Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
         <a href="map.html">Как нас найти?</a><br>
         Телефон: +7 (495) 666-02-66
   	</p>
-  	<div>
+  	<div class="main-footer-social">
   		<p>Давайте дружить!</p>
   		<ul>
-  			<li><a href="">Вконтакте</a></li>
-  			<li><a href="">Фейсбук</a></li>
-  			<li><a href="">Инстаграм</a></li>
+  			<li><a href="" class="btn btn-social btn-social--vk">Вконтакте</a></li>
+  			<li><a href="" class="btn btn-social btn-social--fb">Фейсбук</a></li>
+  			<li><a href="" class="btn btn-social btn-social-inst">Инстаграм</a></li>
   		</ul>
   	</div>
-    <p>Разработано:
-       <a href="">HTML Academy</a>
+    <p class="main-footer-copyright">Разработано:
+       <a href="" class="btn btn-copyright">HTML Academy</a>
     </p>
   </footer>
 
-  <section class="login">
+  <section class="modal modal-login">
   	<h2>Личный кабинет</h2>
   	<p>Введите свой логин и пароль</p>
   	<!--form-->
-  	<form class ="user" method="post" action="https://scho.htmlacademy.ru">
+  	<form class ="modal-login-form" method="post" action="https://scho.htmlacademy.ru">
   		<p>
-  			<label for="user-login">Логин</label>
-  			<input type="email" name="login" id="user-login" placeholder="email@example.com">
+  			<label for="user-login" class="visually-hidden">Логин</label>
+  			<input class="login-icon-user" type="email" name="login" id="user-login" placeholder="email@example.com">
   		</p>
   		<p>
-  			<label for="user-password">Пароль</label>
-  			<input type="password" name="password" id="user-password" placeholder="........">
+  			<label for="user-password" class="visually-hidden">Пароль</label>
+  			<input class="login-icon-password" type="password" name="password" id="user-password" placeholder="........">
   		</p>
-  		<p>
-  			<input type="checkbox" name="remember" id="remember">
-  			<label for="remember">
+  		<p class="login-icon-password-info">
+  			<input type="checkbox" name="remember" id="remember" >
+  			<label for="remember"class="login-checkbox">
   				Запомните меня
   			</label>
-  			<a href="#">Я забыл пароль!</a>
+  			<a class="restore" href="#">Я забыл пароль!</a>
   		</p>
-  		<button type="submit">Войти</button>
+  		<button type="submit" class="btn">Войти</button>
   	</form>
 
-  	<button type="button">Закрыть</button>
+  	<button type="button" class="modal-close">Закрыть</button>
   </section>
 
-  <section class="map">
-  	<h2>Как до нас добраться</h2>
+  <section class="modal modal-map">
+  	<h2 class="visually-hidden">Как до нас добраться</h2>
   	<p>
   		<img srcset="img/map@2x.png 2x, img/map@3x.png 3x"
   		      src="img/map.png" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
   	</p>
-  	<button type="button">Закрыть</button>
+  	<button type="button" class="modal-close">Закрыть</button>
   </section>  	
 </body>
 </html>
