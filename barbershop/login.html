@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<title>Барбершоп «Бородинский»-прайс-лист</title>
+	<title>Барбершоп «Бородинский»-Личный кабинет</title>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -19,14 +19,14 @@
 		      <ul class="site-navigation">
 			      <li><a href="info.html">Информация</a></li>
 			      <li><a href="news.html">Новости</a></li>
-			      <li class="active"><a class="current">Прайс-лист</a></li>
+			      <li><a href="price.html">Прайс-лист</a></li>
 			      <li><a href="catalog.html">Магазин</a></li>
 			      <li><a href="contacts.html">Контакты</a></li>
 		      </ul>
 
 		      <ul class="user-navigation">
-			      <li>
-				      <a class= "login-link" href="login.html">Вход</a>
+			      <li class="active">
+				      <a class= "login-link">Вход</a>
 			      </li>
 		      </ul>
         </div>
@@ -36,65 +36,40 @@
 
 	<main class="container">
     <div class="inner-title">
-		  <h1 class="title-h1">Прайс-лист</h1>
+		  <h1 class="title-h1">Личный кабинет</h1>
         <ul class="breadcrumbs">
         	<li>
         		<a href="index.html">Главная</a>
         	</li>
         	<li>
-        		<a href="" class="current">Прайс-лист</a>
+        		<a href="" class="current">Личный кабинет</a>
         	</li>
         </ul>
       </div>
 
-        <!--custom content example page-->
-        <section class="inner-content"> 
-          <h2 class="title-big">
-            <b>Истинно мужская классика</b>
-          </h2>
-          
-          <div class="inner-columns">
-           
-            <section class="inner-columns-left">
-              <h3>Мы используем<br>только лучшие средства:</h3>
-              <ul class="custom-list-1">
-                <li>Baxter of California</li>
-                <li>Mr Natty</li>
-                <li>Suavecito</li>
-                <li>Malin+Goetz</li>
-              </ul> 
-            </section>
+    <section class="login"> 
+      <p>Введите свой логин и пароль</p>
+      <!--form-->
+      <form class ="modal-login-form" method="post" action="https://scho.htmlacademy.ru">
+        <p>
+          <label for="user-login" class="visually-hidden">Логин</label>
+          <input class="login-icon-user" type="email" name="login" id="user-login" placeholder="email@example.com">
+        </p>
+        <p>
+          <label for="user-password" class="visually-hidden">Пароль</label>
+          <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="........">
+        </p>
+        <p class="login-icon-password-info">
+          <input type="checkbox" name="remember" id="remember" class="visually-hidden" checked>
+          <label for="remember"class="login-checkbox" >
+            <span class="checkbox-indicator"></span>Запомните меня
+          </label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button type="submit" class="btn">Войти</button>
+      </form>
 
-          <section class="inner-columns-right">
-            <h3>Цены на услуги<br>наших мастеров:</h3>
-            <table class="custom-table-1">
-              <tr>
-                <td>Стрижка</td>
-                <td>1500 &#8381;</td>
-              </tr>
-              <tr>
-                <td>Стрижка бороды</td>
-                <td>500 &#8381;</td>
-              </tr>
-              <tr>
-                <td>Накрутка усов</td>
-                <td>350 &#8381;</td>
-              </tr>
-            </table>
-          </section>
-        </div>
-
-       
-
-        <div class="inner-columns">
-          <h3>Несколько слов о нас:</h3>
-          <section class="inner-columns-left">
-            <p>Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
-          </section>  
-          <section class="inner-columns-right">
-            <p>Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
-          </section>
-        </div>
+      <button type="button" class="modal-close" aria-label="Закрыть"></button>
     </section>
 	</main>
 
@@ -127,31 +102,6 @@
     </div>
   </footer>
 
-  <section class="modal modal-login">
-    <h2 class="title-h1">Личный кабинет</h2>
-    <p>Введите свой логин и пароль</p>
-    <!--form-->
-    <form class ="modal-login-form" method="post" action="https://scho.htmlacademy.ru">
-      <p>
-        <label for="user-login" class="visually-hidden">Логин</label>
-        <input class="login-icon-user" type="email" name="login" id="user-login" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="user-password" class="visually-hidden">Пароль</label>
-        <input class="login-icon-password" type="password" name="password" id="user-password" placeholder="........">
-      </p>
-      <p class="login-icon-password-info">
-        <input type="checkbox" name="remember" id="remember" class="visually-hidden" checked>
-        <label for="remember"class="login-checkbox" >
-          <span class="checkbox-indicator"></span>Запомните меня
-        </label>
-        <a class="restore" href="#">Я забыл пароль!</a>
-      </p>
-      <button type="submit" class="btn">Войти</button>
-    </form>
-
-    <button type="button" class="modal-close" aria-label="Закрыть"></button>
-  </section>
 
   <section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться</h2>
