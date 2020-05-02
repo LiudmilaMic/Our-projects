@@ -1,0 +1,144 @@
+.features {
+  
+  margin-bottom: 80px;
+  padding-top: 65px;
+  
+  background-color: $grey-features;
+
+  & > .container{
+    position: relative;
+    padding-bottom: 352px;
+  }
+
+  .title{
+    margin-bottom: 27px;
+  }
+
+  &__description{
+    margin: 0;
+    font-family: "PT Sans", sans-serif;
+    font-size: $font-size-sm;
+  }
+
+  &__slider{
+    position: absolute;
+    /*box-shadow: inset 0px 0px 2px 4px red;*/
+    left: 10px;
+    bottom: 0;
+
+    width: 950px;
+    height: 285px;
+
+    .slider__controls{
+       top: 0;
+       left: 0;
+       transform: translate(0);
+
+       &::before{
+        content: "";
+        position: absolute;
+        left: 230px;
+        top: -35px;
+        width: 10px;
+        height: 272px;
+
+        background-image: url(../img/shadow.png);
+        background-size: 10px 272px;
+        background-position: center;
+        background-repeat: no-repeat;
+       }
+
+      .control{
+        display: block;
+        width: 240px;
+        height: auto;
+        margin: 0;
+        padding: 16px 22px;
+
+        font-family: inherit;
+        font-size: 1.3125rem;
+        line-height: $line-height-lg;
+        font-weight: $font-weight-bold;
+        text-align: left;
+
+        color: $white;
+        background-color: $blue-1;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0px 1px 0px 0px rgba(64, 80, 105, 1) inset,
+                    0px 1px 0px 0px rgba(41, 52, 73, 1);
+
+        &:hover,
+        &:focus{
+          background-color: $blue-2;
+        }
+
+        &:active{
+          color: rgba(255, 255, 255, 0.3);
+        }
+
+        &.active{
+          color: $blue-1;
+          background-color: $white;
+          box-shadow: none;
+        }           
+      }
+    }
+
+    .slide{
+       padding-left: 320px;
+       padding-right: 250px;
+
+       background-repeat: no-repeat;
+       background-position: bottom right;
+
+      &--1{
+        background-image: url(../img/delivery.png);
+        background-size: 468px 261px;
+        background-position: 98% bottom;
+
+        @include retina{
+          background-image: url(../img/delivery@2x.png);
+        }
+      }
+
+      &--2{
+        background-image: url(../img/guarantee.png);
+        background-size: 389px 283px;
+
+        @include retina{
+          background-image: url(../img/guarantee@2x.png);
+        }
+      }
+
+      &--3{
+        background-image: url(../img/credit.png);
+        background-size: 465px 285px;
+
+        @include retina{
+          background-image: url(../img/credit@2x.png);
+        }
+      }
+
+      &__title{
+        margin-bottom: 25px;
+
+        font-size: $h1-font-size;
+        line-height: 2.25rem;
+        color: $blue-1;
+      }
+
+      &__description{
+        margin: 0;
+
+        font-family: "PT Sans", sans-serif;
+        font-size: $font-size-sm;
+      }
+    }
+
+    .slide__btn{
+      width: 195px;
+      margin-top: 18px;
+    }
+  }
+}

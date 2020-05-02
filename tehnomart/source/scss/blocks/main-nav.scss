@@ -1,0 +1,43 @@
+.main-navigation {
+  padding: 0 20px;
+  color: $white;
+  background-color: $blue-1;
+  box-shadow: 0px -5px 0px 0px rgba(41, 52, 73, 1) inset;
+  
+  &__list{
+    @include no-list-style;
+    @include make-row;
+    padding-bottom: 5px;
+  }
+
+
+  &__link{
+    position: relative;
+    display: block;
+    padding: 20px 30px;
+    padding-bottom: 18px;
+    
+    font-size: 1.0625rem;
+    line-height: 1.0625rem;
+    color: $white;
+
+    &:hover,
+    &:focus{
+      background-color: $blue-2;
+    }
+
+    &:active{
+      background-color: $blue-2;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &.active,
+    &.active:hover,
+    &.active:focus,
+    &.active:active{
+      color: $red-2;
+      background-color: $blue-1;
+      cursor: default;
+    }
+  }
+}

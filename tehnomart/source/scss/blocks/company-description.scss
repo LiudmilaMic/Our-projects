@@ -1,0 +1,87 @@
+.company-description {
+  margin-bottom: 86px;
+
+  @include make-row;
+  align-items: flex-start;
+
+  &__left{
+    width: 540px;
+
+    p{
+      margin-bottom: 21px;
+    }
+
+    .about-btn{
+      width: 220px;
+      margin-top: 17px;
+    }
+  }
+
+  &__right{
+    width: 300px; 
+
+    p{
+      margin-bottom: 31px;
+    }
+
+    .message-btn{
+      width: 100%;
+    }
+  }
+
+
+  .title{
+    margin-bottom: 26px;
+  }
+  
+  &__text{
+    margin: 24px 0;
+
+    font-family: "PT Sans", sans-serif;
+    font-size: $font-size-sm;
+  }
+
+  &__list{
+    @include no-list-style;
+
+    li{
+      position: relative;
+      padding-left: 37px;
+      margin-bottom: 20px;
+
+      font-size: $font-size-lg;
+      line-height: 1.25rem;
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 2px;
+        top: 50%;
+
+        width: 25px;
+        height: 2px;
+
+        background-color: $red-2;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .map-btn{
+    display: block;
+    width: 300px;
+    height: 158px;
+
+    margin-bottom: 40px;
+
+     &:hover,
+     &:focus{
+      box-shadow: 0px 10px 25px 0px rgba(41, 34, 49, 0.5);
+    } 
+
+    &:active{
+      opacity: 0.3;
+    } 
+  }
+}

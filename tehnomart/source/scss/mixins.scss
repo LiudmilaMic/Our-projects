@@ -1,0 +1,57 @@
+
+@mixin no-list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+@mixin no-fieldset-style {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  legend {
+    padding: 0;
+  }
+}
+
+
+@mixin retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    @content;
+  }
+}
+
+@mixin btn{
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+
+  padding: $btn-padding;
+
+  font-family: $font-family-base;
+  font-size: $btn-font-size;
+  font-weight: $font-weight-normal;
+  line-height: $btn-line-height;
+
+  color: $white;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+
+  border-radius: $btn-border-radius;
+
+  cursor: pointer;
+}
+
+@mixin make-row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+

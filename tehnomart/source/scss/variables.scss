@@ -1,0 +1,137 @@
+ 
+$container-width:    960px;
+$container-padding:  10px;
+
+// Color system
+
+$white:    #fff !default;
+
+$grey-header: #f3f7f8;
+$grey-features: #f4f8f9;
+$grey-hit:      #f9f5f0;
+$grey-bottom-text: #f1f5f7;
+$grey: #c5c5c5;
+$grey-border-hover: #bdc6ca;
+$grey-inner: #f2f6f8;
+$grey-form:#f7f3ec;
+$grey-radio-check: #b5b5b5;
+
+
+$black:   #000 !default;
+$red-2:     #ee3643;
+$red-1: #ff5357;
+$red-3: #ca2c37;
+$red-4: #ba2732;
+$yellow:  #ffd180;
+$green-1:   #63a63e;
+$green-2: #5fbb2d;
+$green-3: #518534;
+$blue-2:    #293449;
+$blue-1:     #32425c;
+$blue-3: #212a3a;
+$blue-4: #161d29;
+
+$body-bg:                   $white !default;
+$body-color:                $black;
+
+
+// Style p element.
+
+$paragraph-margin-bottom:  15px;
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif:      Cuprum, PT Sans, Arial, sans-serif;
+$font-family-base:            $font-family-sans-serif !default;
+
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.125) !default;
+$font-size-sm:                ($font-size-base * .8125) !default;
+
+
+$font-weight-normal:          400 !default;
+$font-weight-medium:          500 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5rem !default;
+
+$h1-font-size:                $font-size-base * 2.25 !default;
+$h2-font-size:                $font-size-base * 1.875 !default;
+$h3-font-size:                $font-size-base * 1.5 !default;
+
+
+$line-height-lg:              1.875rem !default;
+$line-height-sm:              1.125rem !default;
+
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+
+
+$btn-padding:                 10px;
+
+
+$btn-font-size:               0.875rem;
+$btn-line-height:             $line-height-sm; 
+$btn-font-weight:             $font-weight-normal;  
+
+$btn-color:                   $red-2;
+$btn-hover-color:             $red-3;
+$btn-active-color:            $red-4;
+
+$btn--green-color:             $green-1;
+$btn--green-hover-color:       $green-2;
+$btn--green-active-color:      $green-3;
+
+$btn--transparent-color:              rgba(0, 0, 0, 0.1);
+$btn--transparent-hover-color:        rgba(0, 0, 0, 0.2);
+$btn--transparent-active-color:       rgba(0, 0, 0, 0.3);
+
+
+
+
+$btn-border-radius:           5px;
+
+$input-padding-y:             8px; 
+$input-padding-x:             15px; 
+$input-line-height:           $line-height-sm;
+$input-color:                 $blue-1; 
+$input-border-color:          #d7dcde; 
+$input-border-width:          2px;
+
+
+$input-border-radius:         2px; 
+
+
+$input-hover-border-color:     #b5b5b5;
+$input-focus-border-color:     $red-1;
+
+
+// Modals
+
+// Padding applied to the modal body
+$modal-padding-x:               80px;
+$modal-padding-y:               35px;
+
+
+$modal-content-bg:               $white !default;
+
+$modal-content-box-shadow:       0px 20px 40px 0px rgba(0, 1, 1, 0.75);
+
+
+$modal-lg:                          940px !default;
+$modal-md:                          620px !default;
+$modal-sm:                          300px !default;
+
+
+
+

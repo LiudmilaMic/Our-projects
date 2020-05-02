@@ -1,0 +1,334 @@
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+
+
+//Global tag rules
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+//Global class rules
+
+/*.page {
+  &--inner {
+    background-color: $body-bg;
+    color: $body-color;
+  }
+}*/
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container{
+  width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.cross {
+  position: relative;
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    width: 30px;
+    height: 4px;
+    background-color: $red-2;
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::after{
+    opacity: 0.5;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+
+.btn {
+  @include btn;
+  background-color: $btn-color;
+
+  &:hover,
+  &:focus{
+    background-color: $btn-hover-color;
+  }
+
+  &:active{
+    background-color: $btn-active-color;
+  }
+} 
+
+.btn--green {
+  @include btn;
+  background-color: $btn--green-color;
+  box-shadow: 0px -3px 0px 0px rgba(54, 115, 21, 1) inset;
+ 
+  &:hover,
+  &:focus{
+    background-color: $btn--green-hover-color;
+  }
+
+  &:active{
+    background-color: $btn--green-active-color;
+  }
+}
+
+.btn--transparent {
+  @include btn;
+  background-color: $btn--transparent-color;
+ 
+  &:hover,
+  &:focus{
+    background-color: $btn--transparent-hover-color;
+  }
+
+  &:active{
+    background-color: $btn--transparent-active-color;
+  }
+}
+
+.btn--border{
+  @include btn;
+  color: $black;
+
+  background-color: transparent;
+  border: 1px solid $grey;
+
+  &:hover,
+  &:focus{
+    background-color: transparent;
+    border-color: $grey-border-hover;
+  }
+
+  &:active{
+    background-color: transparent;
+    border-color: $red-2;
+  }
+}
+
+
+.title{
+  margin: 0;
+  font-size: $h2-font-size;
+  line-height: 1.875rem;
+  font-weight: $font-weight-normal;
+  text-transform: uppercase;
+}
+
+.paginator{
+  display: flex;
+  flex-wrap: wrap;
+
+  &__btn{
+    width: 38px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    font-size: $font-size-sm;
+    font-family: "PT Sans", sans-serif;
+
+    &--next{
+      width: 140px;
+      margin-right: 0;
+    }
+  }
+
+  .current{
+    color: $white;
+    background-color: $red-2;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active{
+      color: $white;
+      background-color: $red-2;
+      border: none;
+      cursor: default;
+    }
+  }
+}
+
+.new::before{
+  position: absolute;
+  content: "new";
+  right: -23px;
+  top: 7px;
+  
+  padding: 2px 30px;
+
+  color: $white;
+  background-color: $red-1;
+
+  transform: rotate(45deg);
+}
+
+.breadcrumbs{
+  @include no-list-style;
+  @include make-row;
+  justify-content: flex-start;
+  margin-bottom: 17px;
+
+  li{
+    position: relative;
+    margin-right: 19px;
+    padding-right: 22px;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 7px;
+      height: 7px;
+      border-right: 1px solid #c5c9d1;
+      border-bottom: 1px solid #c5c9d1;
+
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    &:last-child::after{
+      display: none;
+    }
+  }
+
+  .icon-home{
+
+    &:hover,
+    &focus{
+      svg{
+        polygon{
+          fill: $blue-1;
+        }
+        path{
+          fill: $blue-1;
+        }
+      }
+    }
+
+    &:active{
+      opacity: 0.6;
+    }
+  }
+
+  a{
+    position: relative;
+    font-family: "PT Sans", sans-serif; 
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+
+    color: inherit;
+    text-transform: uppercase;
+
+    &:hover,
+    &focus{
+      text-decoration: underline;
+      text-decoration-color: $red-2;
+    }
+
+    &:active,
+    &.current{
+      color: $red-2;
+      text-decoration: none;
+    }
+  }
+}
+
+.inner{
+
+  &__title{
+  margin-bottom: 19px;
+  padding: 30px;
+
+  color: $blue-1;
+  background-color: $grey-inner;
+  }
+
+  &__description{
+
+    padding-top: 65px;
+    padding-bottom: 70px;
+    background-color: $grey-inner;
+
+    .title{
+      margin-bottom: 25px;
+    }
+
+    p{
+      margin: 0;
+      font-size: $font-size-sm;
+      font-family: "PT sans", sans-serif;
+    }
+  }
+}
+
+.current,
+.active{
+  cursor: default;
+}
+
+
+
+
+
+

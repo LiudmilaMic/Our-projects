@@ -1,0 +1,135 @@
+.services {
+  position: relative;
+  margin-bottom: 52px;
+
+  /*box-shadow: inset 0px 0px 2px 4px blue;*/
+
+  &__list{
+    @include no-list-style;
+    @include make-row;
+  }
+
+  &__item{
+    position: relative;
+    width: 300px;
+    min-height: 123px;
+    margin-top: 20px;
+    padding: 20px 22px;
+    padding-right: 140px;
+
+    color: $white;
+
+    background-repeat: no-repeat; 
+
+    overflow: hidden;
+
+    &--materials{
+      background-color: #ffbf47;
+      background-image: url(../img/icon-1.svg);
+      background-size: 44px 65px;
+      background-position: 83% center;
+    }
+
+    &--instruments{
+      background-color: #3bbce3;
+      background-image: url(../img/icon-2.svg);
+      background-size: 75px 61px;
+      background-position: 87% center;
+    }
+
+    &--technic{
+      background-color: #dc91d8;
+      background-image: url(../img/icon-3.svg);
+      background-size: 78px 62px;
+      background-position: 86% center;
+    }
+
+    &--discount{
+      background-color: #8ed78f;
+       background-image: url(../img/icon-4.svg);
+      background-size: 59px 72px;
+      background-position: 81% center;
+    }
+
+    &--delivery{
+      background-color: #ffc047;
+      background-image: url(../img/icon-5.svg);
+      background-size: 78px 63px;
+      background-position: 86% center;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3){
+      margin-top: 0;
+    }
+
+    &:nth-child(4),
+    &:nth-child(5){
+      margin-left: 640px;
+    }
+
+    .title{
+      margin-bottom: 12px;
+      font-size: $h3-font-size;
+      font-weight: $font-weight-bold;
+      text-transform: none;
+    }
+
+    .btn--transparent{
+      width: 135px;
+    }
+  }
+
+  &__slider{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 620px;
+    height: 266px;
+
+    .slide{
+      background-image: url(../img/slide1.jpg);
+      background-position: 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 620px 266px;
+
+      @include retina{
+        background-image: url(../img/slide1@2x.jpg);
+      }
+
+      &--2{
+        background-image: url(../img/slide2.jpg);
+      
+        @include retina{
+          background-image: url(../img/slide2@2x.jpg);
+        }
+      }
+    }
+  }
+
+  .slide__wrapper{
+    margin-bottom: 98px;
+    padding: 22px 25px;
+    padding-bottom: 23px;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  .slide__title{
+    font-size: $h1-font-size;
+    line-height: 2.25rem;
+    font-weight: $font-weight-bold;
+  }
+
+  .slide__description{
+    margin: 0;
+    font-size: $font-size-lg;
+  }
+
+  .slide__btn{
+    width: 195px;
+    margin-left: 25px;
+  }  
+}
