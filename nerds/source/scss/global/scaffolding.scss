@@ -1,0 +1,182 @@
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  background-color: $body-bg;
+  color: $body-color;
+}
+
+
+
+//Global tag rules
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+a{
+  text-decoration: none;
+}
+
+//Global class rules
+
+/*.page {
+  &--inner {
+    background-color: $body-bg;
+    color: $body-color;
+  }
+}*/
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container{
+  width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+}
+
+.cross {
+  position: relative;
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    width: 30px;
+    height: 4px;
+    background-color: $red;
+    opacity: 0.3;
+  }
+
+  &::before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after,
+  &:focus::before,
+  &:focus::afte{
+    opacity: 1;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.1;
+  }
+}
+
+
+.btn {
+  @include btn;
+  color: $white;
+  background-color: $btn-color;
+
+  &:hover,
+  &:focus{
+    background-color: $btn-hover-color;
+  }
+
+  &:active{
+    color: rgba(255, 255, 255, 0.3);
+    background-color: $btn-active-color;
+    box-shadow: $btn-active-box-shadow;
+  }
+} 
+
+.btn--grey {
+  @include btn;
+
+  color: $black;
+  background-color: $btn--grey-color;
+ 
+  &:hover,
+  &:focus{
+    background-color: $btn--grey-hover-color;
+  }
+
+  &:active{
+    background-color: $btn--grey-active-color;
+    box-shadow: $btn-active-box-shadow;
+  }
+}
+
+
+.title{
+  margin: 0;
+  color: $black;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+}
+
+.paginator{
+  display: flex;
+  flex-wrap: wrap;
+
+  &__btn{
+    width: 50px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    &--next{
+      width: 260px;
+      margin-right: 0;
+    }
+  }
+
+  .current{
+    padding: 14px;
+    background-color: $white;
+    border: 2px solid $btn--grey-color;
+
+    &:hover,
+    &:focus,
+    &active{
+      background-color: $white;
+      border: 2px solid $btn--grey-color;
+      cursor: default;
+    }
+  }
+}
+
+
+
+
+

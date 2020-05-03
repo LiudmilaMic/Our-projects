@@ -1,0 +1,51 @@
+.clients {
+  margin-bottom: 80px;
+
+  border-bottom: 2px solid $grey;
+
+  &__list{
+    @include no-list-style;
+    @include make-row;
+
+    li{
+      position: relative;
+      
+      &::after{
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 55px;
+     
+        top: 50%;
+        right: -20px;
+
+        background-color: $grey;
+
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(4n)::after{
+        display: none;
+      }
+    }
+  }
+
+  &__item{
+    display: flex;
+    width: 260px;
+    min-height: 180px;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0.2;
+
+    &:hover,
+    &:focus{
+      opacity: 1;
+    }
+
+    &:active{
+      opacity: 0.1;
+    }
+  }
+}
