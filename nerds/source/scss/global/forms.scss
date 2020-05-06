@@ -90,11 +90,11 @@
   }
 
   input[type="radio"]:disabled+label{
-    color: rgba(40, 49, 54, 0.1);
+    color: rgba(40, 49, 54, 0.3);
   }
 
   input[type="radio"]:disabled+label .radio-indicator{
-    background-color: #4d4d4d;
+    border-color: #4d4d4d;
     opacity: 0.1;
   }
 }
@@ -148,17 +148,18 @@
     transform: rotate(-45deg);
   }
 
+
   input[type="checkbox"]:hover+label .checkbox-indicator:before,
   input[type="checkbox"]:focus+label .checkbox-indicator:before{
     border-color: $grey-radio-check;
   }
 
   input[type="checkbox"]:disabled+label{
-    color: rgba(40, 49, 54, 0.1);
+    color: rgba(40, 49, 54, 0.3);
   }
 
   input[type="checkbox"]:disabled+label .checkbox-indicator{
-    background-color: #4d4d4d;
+    border-color: #4d4d4d;
     opacity: 0.1;
   }
 }

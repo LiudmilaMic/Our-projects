@@ -1,0 +1,112 @@
+.slider {
+  position: relative;
+  width: 100%;
+  height: 430px;
+
+  &__slides{
+    @include no-list-style;
+    position: relative;
+    width: 100%;
+    height: 430px;
+  }
+
+  .slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+
+    padding-right: 600px;
+    padding-top: 78px;
+    background-image: url(../img/slide1.png);
+    background-position: 94% 100%;
+    background-repeat: no-repeat;
+    background-size: 698px 413px;
+
+
+    opacity: 0;
+    z-index: 1;
+
+    transition: opacity 1s;
+
+    @include retina{
+      background-image: url(../img/slide1@2x.png);
+    }
+
+    &--2{
+      background-image: url(../img/slide2.png);
+      background-position: 100% 100%;
+      background-size: 663px 430px;
+      
+      @include retina{
+        background-image: url(../img/slide2@2x.png);
+      }
+    }
+
+    &--3{
+      background-image: url(../img/slide3.png);
+      background-position: 100% 100%;
+      background-size: 759px 411px;
+      
+      @include retina{
+        background-image: url(../img/slide3@2x.png);
+      }
+    }
+
+    &.showing{
+      opacity: 1;
+      z-index: 2;
+    }
+
+    &__title{
+      margin-bottom: 27px;
+      font-size: 3.4375rem;
+      line-height: 3.4375rem;
+      text-transform: none;
+    }
+
+    &__description{
+      margin: 0;
+      margin-bottom: 38px;
+    }
+
+    &__btn{
+      width: 240px;
+    }
+  }
+
+  &__controls{
+    position: absolute;
+    left: 50%;
+    bottom: 95px;
+
+    font-size: 0;
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+
+    .control{
+      position: relative;
+      width: 18px;
+      height: 18px;
+      margin: 0 8px;
+      background-color: $white;
+      border: none;
+      border-radius: 50%;
+     
+      &.active::before{
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 2px solid #c1c1c1;
+        border-radius: 50%;
+      }
+    }
+  } 
+}
