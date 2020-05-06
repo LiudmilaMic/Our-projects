@@ -327,6 +327,20 @@ input[type="radio"].visually-hidden{
   cursor: default;
 }
 
+.google-map{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  iframe{
+    width: 940px;
+    height: 446px;
+    border: 0;
+  }
+}
+
 
 
 
