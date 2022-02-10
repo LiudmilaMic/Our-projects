@@ -18,7 +18,7 @@
 		"grunt-replace": "^1.0.1",
 		"grunt-sass": "^2.1.0",
 		"load-grunt-tasks": "^3.5.2",
-		"node-sass": "^4.13.1"
+		"node-sass": "^7.0.0"
 	},
 	"dependencies": {
 		"npm": "^5.8.0"
